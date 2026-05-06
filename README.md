@@ -14,6 +14,18 @@ Ask natural language questions about plant biology research and receive grounded
 
 ## Demo
 
+### Streamlit UI
+
+**Answer view** — grounded response with latency metrics:
+
+![PhytRAG answer view](docs/screenshots/ui_answer.png)
+
+**Sources view** — ranked retrieved chunks with PubMed Central links:
+
+![PhytRAG sources view](docs/screenshots/ui_sources.png)
+
+### REST API
+
 ```bash
 curl -X POST http://localhost:8000/query \
   -H "Content-Type: application/json" \
@@ -179,9 +191,9 @@ Runs 5 held-out plant biology questions against the indexed corpus, computes Hit
 
 ## What this is and what it is not
 
-**This is**: a demonstration of production MLOps patterns applied to a meaningful scientific use case. The same six-layer architecture (data ingestion, orchestration, serving, tracking, packaging, observability) applies directly to serving protein language models (ESM-2, AlphaFold) and genomic LLMs at research organisations.
+**This is** a demonstration of production MLOps patterns applied to a meaningful scientific use case. The same six-layer architecture (data ingestion, orchestration, serving, tracking, packaging, observability) applies directly to serving protein language models (ESM-2, AlphaFold) and genomic LLMs at research organisations.
 
-**This is not**: a production system. It runs on a single machine, has no authentication, uses approximate token counting, and does not implement request queuing or rate limiting. Each of these is a known gap and a natural next step.
+**This is not** a production system. It runs on a single machine, has no authentication, uses approximate token counting, and does not implement request queuing or rate limiting. Each of these is a known gap and a natural next step.
 
 ---
 
