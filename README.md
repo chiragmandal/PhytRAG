@@ -116,11 +116,12 @@ Services start in ~30 seconds. You should see:
 
 ```
 Services started:
-  API docs:    http://localhost:8000/docs
-  Qdrant UI:   http://localhost:6333/dashboard
-  Grafana:     http://localhost:3000  (admin/admin)
-  MLflow:      http://localhost:5000
-  Prometheus:  http://localhost:9090
+  UI (Streamlit): http://localhost:8501
+  API docs:       http://localhost:8000/docs
+  Qdrant UI:      http://localhost:6333/dashboard
+  Grafana:        http://localhost:3001  (admin/admin)
+  MLflow:         http://localhost:5002
+  Prometheus:     http://localhost:9091
 ```
 
 ### 3. Ingest plant biology papers
@@ -141,7 +142,13 @@ Or use the interactive Swagger docs at http://localhost:8000/docs.
 
 ### 5. Explore the dashboards
 
-Open Grafana at http://localhost:3000, navigate to **Dashboards > PhytRAG > PhytRAG Overview**. Run a few queries and watch the latency percentiles, TTFT, and retrieval scores update in real time.
+| Dashboard | URL | Credentials |
+|---|---|---|
+| **Grafana** — PhytRAG Overview | http://localhost:3001/d/phytrag-overview/phytrag-overview | `admin` / `admin` |
+| **MLflow** — retrieval eval experiments | http://localhost:5002 | none |
+| **Prometheus** — raw metrics explorer | http://localhost:9091 | none |
+
+Run a few queries via the Streamlit UI, then watch latency percentiles, TTFT, and retrieval scores update live in Grafana.
 
 ---
 
