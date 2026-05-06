@@ -1,0 +1,35 @@
+# Keep the Docker build context small and fast
+
+# Git
+.git/
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Local data (large, not needed in image)
+ingestion/data/
+*.jsonl
+
+# Docs
+docs/
+*.md
+
+# Local env
+.env
+.env.*
+venv/
+.venv/
+
+# Editor
+.idea/
+.vscode/

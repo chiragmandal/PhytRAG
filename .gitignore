@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Project data (corpus lives locally, not in git)
+ingestion/data/
+*.jsonl
+
+# Test and coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Environment files
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# Docker
+.docker/
+
+# MLflow local runs (if running outside Docker)
+mlruns/
+mlartifacts/

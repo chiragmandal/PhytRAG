@@ -1,0 +1,22 @@
+# Held-out evaluation questions for the PhytRAG retrieval pipeline.
+# These are used in eval/retrieval_eval.py to track retrieval quality over time.
+#
+# Each entry has:
+#   question:  the natural language query
+#   keywords:  terms that MUST appear in at least one retrieved chunk for a hit
+#              (case-insensitive substring match)
+questions:
+  - question: "What is the role of GA20 oxidase in Arabidopsis stem elongation and gibberellin biosynthesis?"
+    keywords: ["GA20ox", "gibberellin", "elongation"]
+
+  - question: "How does jasmonic acid signaling regulate gene expression during herbivore defense?"
+    keywords: ["jasmonic acid", "JA", "defense", "herbivore"]
+
+  - question: "What are the key components of pattern-triggered immunity in plant innate immune responses?"
+    keywords: ["pattern-triggered", "PTI", "immune", "PAMP"]
+
+  - question: "How do reactive oxygen species function as signals in plant abiotic stress responses?"
+    keywords: ["reactive oxygen", "ROS", "stress"]
+
+  - question: "What transcription factors regulate abscisic acid signaling during drought stress?"
+    keywords: ["abscisic acid", "ABA", "drought", "transcription"]
