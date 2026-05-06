@@ -30,7 +30,7 @@
       "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "value" },
       "targets": [
         {
-          "datasource": "Prometheus",
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
           "expr": "rate(phytrag_queries_total[1m]) * 60",
           "legendFormat": "queries/min"
         }
@@ -57,7 +57,7 @@
       "options": { "reduceOptions": { "calcs": ["lastNotNull"] }, "colorMode": "background" },
       "targets": [
         {
-          "datasource": "Prometheus",
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
           "expr": "rate(phytrag_queries_total{status='error'}[5m]) / (rate(phytrag_queries_total[5m]) + 0.0001)",
           "legendFormat": "error rate"
         }
@@ -86,7 +86,7 @@
       "options": { "reduceOptions": { "calcs": ["lastNotNull"] } },
       "targets": [
         {
-          "datasource": "Prometheus",
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
           "expr": "rate(phytrag_retrieval_score_sum[5m]) / rate(phytrag_retrieval_score_count[5m])",
           "legendFormat": "avg cosine score"
         }
@@ -103,7 +103,7 @@
       "options": { "reduceOptions": { "calcs": ["lastNotNull"] } },
       "targets": [
         {
-          "datasource": "Prometheus",
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
           "expr": "rate(phytrag_tokens_generated_total[1m]) * 60",
           "legendFormat": "tokens/min"
         }
@@ -120,17 +120,17 @@
       "options": { "tooltip": { "mode": "multi" } },
       "targets": [
         {
-          "datasource": "Prometheus",
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
           "expr": "histogram_quantile(0.50, rate(phytrag_query_latency_seconds_bucket{status='ok'}[5m]))",
           "legendFormat": "p50"
         },
         {
-          "datasource": "Prometheus",
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
           "expr": "histogram_quantile(0.95, rate(phytrag_query_latency_seconds_bucket{status='ok'}[5m]))",
           "legendFormat": "p95"
         },
         {
-          "datasource": "Prometheus",
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
           "expr": "histogram_quantile(0.99, rate(phytrag_query_latency_seconds_bucket{status='ok'}[5m]))",
           "legendFormat": "p99"
         }
@@ -146,12 +146,12 @@
       },
       "targets": [
         {
-          "datasource": "Prometheus",
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
           "expr": "histogram_quantile(0.50, rate(phytrag_ttft_seconds_bucket[5m]))",
           "legendFormat": "TTFT p50"
         },
         {
-          "datasource": "Prometheus",
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
           "expr": "histogram_quantile(0.95, rate(phytrag_ttft_seconds_bucket[5m]))",
           "legendFormat": "TTFT p95"
         }
